@@ -21,7 +21,8 @@
         <asp:Label ID="lblmsg" runat="server" Text="Label"></asp:Label>
         <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         </asp:GridView>
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Delete" />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" 
+         OnClientClick="return confirm('Are you sure to delete?');" Text="Delete" />
         <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Update" />
         <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
     </div>
