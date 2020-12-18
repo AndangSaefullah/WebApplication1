@@ -246,10 +246,10 @@ namespace WebApplication1.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Insert", ReplyAction="http://tempuri.org/IService1/InsertResponse")]
-        string Insert(WebApplication1.ServiceReference1.InsertUser user);
+        string Insert(WebApplication1.ServiceReference1.InsertUser value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Insert", ReplyAction="http://tempuri.org/IService1/InsertResponse")]
-        System.Threading.Tasks.Task<string> InsertAsync(WebApplication1.ServiceReference1.InsertUser user);
+        System.Threading.Tasks.Task<string> InsertAsync(WebApplication1.ServiceReference1.InsertUser value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetInfo", ReplyAction="http://tempuri.org/IService1/GetInfoResponse")]
         WebApplication1.ServiceReference1.gettestdata GetInfo();
@@ -297,12 +297,12 @@ namespace WebApplication1.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string Insert(WebApplication1.ServiceReference1.InsertUser user) {
-            return base.Channel.Insert(user);
+        public string Insert(WebApplication1.ServiceReference1.InsertUser value) {
+            return base.Channel.Insert(value);
         }
         
-        public System.Threading.Tasks.Task<string> InsertAsync(WebApplication1.ServiceReference1.InsertUser user) {
-            return base.Channel.InsertAsync(user);
+        public System.Threading.Tasks.Task<string> InsertAsync(WebApplication1.ServiceReference1.InsertUser value) {
+            return base.Channel.InsertAsync(value);
         }
         
         public WebApplication1.ServiceReference1.gettestdata GetInfo() {
